@@ -1,3 +1,10 @@
+/**{
+  padding: 0;
+  width: 0;
+  height: 0;
+}*/
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,16 +21,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
+  background-color: rgb(122, 16, 16);
   margin: 0;
   display: flex;
   place-items: center;
@@ -31,12 +31,42 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.cardDiv {
+  display: flex;
+  flex-direction: column;
+  border-top: #110d0d;
 }
 
-button {
+.header-name-app {
+  font-family: 'Monoton', cursive;
+  color: rgb(207, 207, 15);
+  font-size: 2.2em;
+  line-height: 1.1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+}
+
+
+.infoMovie {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.2;
+
+
+}
+h1{
+  font-family: 'Monoton', cursive;
+  font-size: 2.2em;
+  line-height: 1.1;
+
+}
+
+
+/*button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -60,10 +90,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
+  .poster{
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
   }
-}
+}*/
+
