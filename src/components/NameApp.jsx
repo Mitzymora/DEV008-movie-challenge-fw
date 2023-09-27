@@ -1,8 +1,11 @@
+import SearchInput from "./SearchInput"
+
 export default function NameApp (){
     return (
         <>
-        <header className="header-name-app">
-        <h1>DADAMOVIES</h1> 
+        <header className="container-header">
+        <h1 className="header-name-app">DADAMOVIES</h1> 
+        <SearchInput/> 
         </header>
         </>
     )

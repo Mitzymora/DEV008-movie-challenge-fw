@@ -1,29 +1,35 @@
-export default function CardsMovies (props, movieName, yearMovie = "Unknown") {
-const prueba = props.title;
-const imageSrc = props.movieName;
-const  imageAlt = `Poster de la pelicula ${movieName}`;
-const yearMovieCreated =  `Año de estreno: ${yearMovie}`;
+//import { fetchMovies } from "../Api/fetchMovies";
+import { useState, useEffect } from "react";
+
+
+export default function FetchMovies (props){
+    const [data, setData] = useState ([]);
+    //const [loading, setLoading] = useState (true);
+    const API_URL = 'https://www.omdbapi.com/?apikey=2029afe7&S=oscar'
+    const [search, setSearch]=useState(API_URL)
+    useEffect(() =>{
+    fetch(API_URL)
+    .then((response) => response.json() )
+    .then((data) => {setData(data.Search);
+    });
+}, [API_URL])
+console.log(data);
+
 return (
-    <div> 
-        <img 
-        className = "cards-movie"
-        src= {imageSrc}
-        alt = {imageAlt} 
-        width={200}
-        height={300} 
-        />
-        <section className="infoMovie">
-        <h1>{prueba}</h1>
-        <p>{yearMovieCreated}</p> 
-        </section>
-    </div>
-)
-}
-
-export function Titlemovie (){
-    <>
-    <section>
-
-    </section>
-    </>
+        <div>
+        {data.map( (movie) =>(
+                <div className="card-div">
+                <div key={movie.imdbID}> 
+                <img  className = "cards-movie"
+                src= {movie.Poster}
+                alt = {movie.Title} 
+                width={200}
+                height={300} />
+                <h1>{movie.Title}</h1>
+                <p>Año de estreno: {movie.Year}</p>  
+                </div>
+                </div>
+            ))} 
+            </div>
+        );
 }

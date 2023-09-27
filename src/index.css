@@ -1,56 +1,111 @@
-/**{
-  padding: 0;
-  width: 0;
-  height: 0;
-}*/
-
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgb(122, 16, 16);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} 
 
 
 body {
   background-color: rgb(122, 16, 16);
-  margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
-.cardDiv {
+.container-page {
   display: flex;
   flex-direction: column;
-  border-top: #110d0d;
+}
+
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header-name-app {
   font-family: 'Monoton', cursive;
   color: rgb(207, 207, 15);
-  font-size: 2.2em;
-  line-height: 1.1;
+  font-size: 5em;
+  line-height: 1.5;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   line-height: 1.5;
   font-weight: 400;
-
+  
 
 }
 
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 10px;
+  background-color: rgb(252, 206, 206);
+  border-radius: 10px ;
+  width: 400px;
+  height: 50px ;
+}
+.search-input{
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  padding: px;
+}
+
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-div{
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  border-radius: 70px;
+  border-top: 1px solid black;
+  width: 300px;
+  height: 350;
+}
+
+.infoMovie{
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(122, 16, 16);
+  font-family: 'Monoton', cursive;
+  font-size: 2.2em;
+  line-height: 1.5;
+}
+
+
+img{
+
+  border: 1px solid black;
+  max-width: 100%;
+}
 
 .infoMovie {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -58,12 +113,13 @@ body {
 
 
 }
-h1{
+
+/* h1{
   font-family: 'Monoton', cursive;
   font-size: 2.2em;
   line-height: 1.1;
 
-}
+} */
 
 
 /*button {
