@@ -1,6 +1,6 @@
 import React, {useState }from "react"
 
-export default function SearchInput (){
+export default function SearchInput ({onSearch}){
     const [searchTerm, setSearchTerm] = useState("");
     const handleChange = (e) =>{
         setSearchTerm(e.target.value);
@@ -18,6 +18,7 @@ export default function SearchInput (){
             value={searchTerm}
             onChange={handleChange}
             autoFocus/> 
+            <button type ="submit">Buscar</button>
         </form>         
         </div>
     );

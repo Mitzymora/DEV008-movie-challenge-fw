@@ -8,13 +8,10 @@ import SearchInput from './components/SearchInput'
 function App() {
   return (
     <> 
-    <container className="containe-page">
     <NameApp/>
-    <div className='card-container'>
+
       < FetchMovies    
     />
-    </div>
-    </container>
     </>
   )
 }

@@ -1,11 +1,10 @@
-//import { fetchMovies } from "../Api/fetchMovies";
 import { useState, useEffect } from "react";
 
 
 export default function FetchMovies (props){
     const [data, setData] = useState ([]);
     //const [loading, setLoading] = useState (true);
-    const API_URL = 'https://www.omdbapi.com/?apikey=2029afe7&S=oscar'
+    let API_URL = 'https://www.omdbapi.com/?apikey=2029afe7&S=vendetta'
     const [search, setSearch]=useState(API_URL)
     useEffect(() =>{
     fetch(API_URL)
@@ -16,10 +15,10 @@ export default function FetchMovies (props){
 console.log(data);
 
 return (
-        <div>
-        {data.map( (movie) =>(
-                <div className="card-div">
-                <div key={movie.imdbID}> 
+        <div className='card-container'>
+        {data && data.length> 0? (
+            data.map( (movie) => (
+                <div className="card-div" key={movie.imdbID}> 
                 <img  className = "cards-movie"
                 src= {movie.Poster}
                 alt = {movie.Title} 
@@ -28,8 +27,10 @@ return (
                 <h1>{movie.Title}</h1>
                 <p>Año de estreno: {movie.Year}</p>  
                 </div>
-                </div>
-            ))} 
+            ))
+        ): (
+            <p>No se encontraron perlículas.</p>
+        )}
             </div>
         );
 }
